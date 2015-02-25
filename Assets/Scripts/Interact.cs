@@ -24,6 +24,9 @@ public class Interact : MonoBehaviour {
 					if(!sc.isAttached())
 						sc.attachTo(transform.Find("Main Camera"));
 				}
+				else if(hitObject.collider.CompareTag("Door")) {
+					hitObject.collider.GetComponent<Door>().moveDoor(transform);
+				}
 			}
 			else
 				print ("Unknown item");
