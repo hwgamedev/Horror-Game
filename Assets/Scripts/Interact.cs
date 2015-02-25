@@ -12,10 +12,18 @@ public class Interact : MonoBehaviour {
 	void Update () {
 		Vector3 fwd = transform.TransformDirection (Vector3.forward);
 		RaycastHit hitObject;
-		if (Physics.Raycast (transform.position, fwd, out hitObject, 1)) {
-			if(Input.GetKey("e") && hitObject.collider.CompareTag("Item")) {
-				//TODO: put item in inventory
-				Destroy (hitObject.collider.gameObject);
+		if (Physics.Raycast (transform.position, fwd, out hitObject, 10f)) {
+			print ("Scenery in sight!");
+			if(Input.GetKey("e")) {
+				if(hitObject.collider.CompareTag("Item")) {
+					//TODO: put item in inventory
+					Destroy (hitObject.collider.gameObject);
+				}
+				else if(hitObject.collider.CompareTag("Scenery")) {
+					Scenery sc = hitObject.collider.GetComponent<Scenery>();
+					if(!sc.isAttached())
+						sc.attachTo(transform.Find("Main Camera"));
+				}
 			}
 			else
 				print ("Unknown item");
