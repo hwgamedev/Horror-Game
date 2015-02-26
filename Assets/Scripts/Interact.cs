@@ -13,7 +13,7 @@ public class Interact : MonoBehaviour {
 		Vector3 fwd = transform.TransformDirection (Vector3.forward);
 		RaycastHit hitObject;
 		if (Physics.Raycast (transform.position, fwd, out hitObject, 10f)) {
-			print ("Scenery in sight!");
+			print ("Looking at: "+hitObject.collider.tag);
 			if(Input.GetKey("e")) {
 				if(hitObject.collider.CompareTag("Item")) {
 					//TODO: put item in inventory
@@ -25,11 +25,10 @@ public class Interact : MonoBehaviour {
 						sc.attachTo(transform.Find("Main Camera"));
 				}
 				else if(hitObject.collider.CompareTag("Door")) {
+					print ("Grabbing door!");
 					hitObject.collider.GetComponent<Door>().moveDoor(transform);
 				}
 			}
-			else
-				print ("Unknown item");
 		}
 	}
 }
