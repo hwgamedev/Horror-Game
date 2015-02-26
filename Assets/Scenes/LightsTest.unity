@@ -627,7 +627,7 @@ Light:
   serializedVersion: 3
   m_Type: 2
   m_Color: {r: 1, g: .796957374, b: .433823526, a: 1}
-  m_Intensity: 1
+  m_Intensity: .720000029
   m_Range: 5
   m_SpotAngle: 33
   m_CookieSize: 10
@@ -663,9 +663,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 031e991a08ca026438da85879656d2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minFlickerSpeed: .100000001
-  maxFlickeringSpeed: 1
+  minDisableSpeed: .100000001
+  maxDisableSpeed: 5
   lightEnabled: 1
+  intensity: 0
+  intensityVariation: .100000001
+  goesBlack: 0
 --- !u!1 &1586265305
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,9 +918,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 031e991a08ca026438da85879656d2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minFlickerSpeed: .100000001
-  maxFlickeringSpeed: 1
+  minDisableSpeed: .100000001
+  maxDisableSpeed: 5
   lightEnabled: 1
+  intensity: 0
+  intensityVariation: .100000001
+  goesBlack: 0
 --- !u!108 &1904489106
 Light:
   m_ObjectHideFlags: 0
@@ -928,7 +934,7 @@ Light:
   serializedVersion: 3
   m_Type: 2
   m_Color: {r: 1, g: .796957374, b: .433823526, a: 1}
-  m_Intensity: 1.03999996
+  m_Intensity: .720000029
   m_Range: 5
   m_SpotAngle: 33
   m_CookieSize: 10
@@ -1153,3 +1159,30 @@ Prefab:
   m_RootGameObject: {fileID: 1586265305}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &2130102192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2130102193}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2130102193
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2130102192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.09956384, y: .0574612617, z: -1.98794556}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
