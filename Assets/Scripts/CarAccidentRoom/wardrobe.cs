@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Item : MonoBehaviour {
+public class wardrobe : MonoBehaviour {
+
+	public Rigidbody doorL;
+	public Rigidbody doorR;
+
 
 	// Use this for initialization
 	void Start () {
@@ -10,6 +14,8 @@ public class Item : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		doorL.transform.Rotate(0,30,0);
 	}
+
+
 }
