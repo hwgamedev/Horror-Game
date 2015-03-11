@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Inventory : MonoBehaviour
 {
 	public GameObject slots;
-	public List<GameObject> slotList = new List<GameObject> ();
+	public List<GameObject> slotsList = new List<GameObject> ();
 	public List<Item> items = new List<Item> ();
 
 	//setup constants
