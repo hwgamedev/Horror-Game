@@ -11,8 +11,10 @@ ModelImporter:
     400004: Cushion
     2300000: Chair
     2300002: Cushion
+    2300004: //RootNode
     3300000: Chair
     3300002: Cushion
+    3300004: //RootNode
     4300000: Cushion
     4300002: Chair
     7400000: Default Take
