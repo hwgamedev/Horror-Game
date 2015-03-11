@@ -6,17 +6,22 @@ ModelImporter:
     100000: //RootNode
     100002: Door
     100004: DoorFrame
+    100006: wallAbove
     400000: //RootNode
     400002: Door
     400004: DoorFrame
+    400006: wallAbove
     2300000: Door
     2300002: DoorFrame
     2300004: //RootNode
+    2300006: wallAbove
     3300000: Door
     3300002: DoorFrame
     3300004: //RootNode
+    3300006: wallAbove
     4300000: Door
     4300002: DoorFrame
+    4300004: wallAbove
     7400000: Default Take
     9500000: //RootNode
   materials:
